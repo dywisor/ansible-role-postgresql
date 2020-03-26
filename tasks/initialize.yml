@@ -1,5 +1,6 @@
 ---
 - name: Set PostgreSQL environment variables.
+  when: ansible_os_family != 'OpenBSD'
   template:
     src: postgres.sh.j2
     dest: /etc/profile.d/postgres.sh
