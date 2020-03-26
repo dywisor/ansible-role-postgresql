@@ -9,6 +9,8 @@ postgresql_restarted_state: "restarted"
 postgresql_python_library: python-psycopg2
 postgresql_user: postgres
 postgresql_group: postgres
+# PostgreSQL database login user, may be different from OS user
+postgresql_login_user: "{{ postgresql_user }}"
 
 postgresql_unix_socket_directories:
   - /var/run/postgresql
