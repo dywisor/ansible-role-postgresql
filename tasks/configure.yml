@@ -28,6 +28,7 @@
   notify: restart postgresql
 
 - name: Ensure PostgreSQL unix socket dirs exist.
+  when: ansible_os_family != 'OpenBSD'
   file:
     path: "{{ item }}"
     state: directory
